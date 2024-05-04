@@ -7,102 +7,111 @@
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
     app:cardBackgroundColor="@color/card_background"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingStart="0dp"
+        android:paddingBottom="8dp"
         android:paddingEnd="16dp">
 
         <ImageView
             android:id="@+id/image_view"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/text_view_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-black"
-            android:maxLines="2"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/label_gender"
             app:layout_constraintStart_toEndOf="@id/image_view"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Rick" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white"
+            android:text="gender:"/>
 
         <TextView
-            android:id="@+id/text_view_alive_status"
+            android:id="@+id/text_view_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_gender"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="female" />
+
+        <TextView
+            android:id="@+id/text_view_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"
             android:maxLines="1"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:drawableStartCompat="@drawable/ic_circle"
+            android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/label_gender"
+            app:layout_constraintTop_toBottomOf="@id/text_view_gender"
+            tools:text="Miss Frida Larsen" />
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Phone:"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@id/text_view_name"
+            app:layout_constraintTop_toBottomOf="@id/text_view_name" />
+
+        <TextView
+            android:layout_marginStart="8dp"
+            android:id="@+id/text_view_phone"
+            android:layout_marginTop="2dp"
             app:layout_constraintTop_toBottomOf="@id/text_view_name"
-            tools:text="Alive - Alien" />
-
-        <TextView
-            android:id="@+id/label_last_known_location"
-            android:layout_width="0dp"
+            app:layout_constraintStart_toEndOf="@id/label_phone"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:maxLines="1"
-            android:text="Last known location:"
-            android:textColor="@color/subtitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/text_view_alive_status"
-            app:layout_constraintTop_toBottomOf="@id/text_view_alive_status" />
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            tools:text="12320060"/>
 
         <TextView
-            android:id="@+id/text_view_last_known_location"
+            android:id="@+id/lebel_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/label_phone"
+            app:layout_constraintTop_toBottomOf="@id/label_phone"
+            android:text="email:" />
+
+        <TextView
+            android:id="@+id/text_view_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:maxLines="1"
+            android:text="frida.larsen@example.com"
             android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/label_last_known_location"
-            app:layout_constraintTop_toBottomOf="@id/label_last_known_location"
-            tools:text="unknown" />
-
-        <TextView
-            android:id="@+id/label_first_known_location"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:maxLines="1"
-            android:text="First seen in:"
-            android:textColor="@color/subtitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/text_view_last_known_location"
-            app:layout_constraintTop_toBottomOf="@id/text_view_last_known_location" />
-
-        <TextView
-            android:id="@+id/text_view_first_known_location"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:maxLines="1"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/label_first_known_location"
-            app:layout_constraintTop_toBottomOf="@id/label_first_known_location"
-            tools:text="Auto Erotic Assimilation" />
-
+            app:layout_constraintTop_toBottomOf="@id/lebel_email"
+            app:layout_constraintStart_toStartOf="@id/lebel_email"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

@@ -27,7 +27,9 @@ android {
         }
     }
 
-    viewBinding.isEnabled = true
+    buildFeatures{
+        viewBinding=true
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

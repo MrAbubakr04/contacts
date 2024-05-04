@@ -8,7 +8,7 @@ import ru.appsmile.rickandmorty.RickAndMortyApiService
 
 object RetrofitApi {
     private val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("https://rickandmortyapi.com/api/")
+        .baseUrl("https://randomuser.me/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
